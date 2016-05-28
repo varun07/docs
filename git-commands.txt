@@ -33,3 +33,6 @@ git push <remote repo name: origin> <branch on origin>
 git pull --rebase <remote repo name: origin> <branch on origin: master>
 git rebase --continue
 git rebase --abort
+
+INITIALATION
+git init --bare
