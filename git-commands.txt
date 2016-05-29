@@ -39,3 +39,28 @@ git init --bare
 
 CONFIGUARTIONS
 git config --global --edit
+configuration in threee files
+|
+--> <repo>/.git/config – Repository-specific settings.
+--> ~/.gitconfig – User-specific settings. This is where options set with the --global flag are stored.
+--> $(prefix)/etc/gitconfig – System-wide settings
+
+SAVING CHANGES
+git add <file>/<directory>
+git add -p {begin and interactive session that lets u choose portions of a file to add to next commit. This will prompt with u chunk of changes and prompts u for a command. y to stage the chunk, n to ignore the chunk, e to manually edit the chunk, q to exit }
+git commit {commit the staged snapshot}
+git commit -a {commit a snapshot of all changes in the current directory}
+
+UNDOING CHANGES
+git chekout <commit> <file> {Checks out a previous version of a file}
+git checkout <commit> {Updates all the files in the working directory to match the specified commit}
+git revert <commit> {Generates a new commit that undo all the changs introduced by speci commit and then apply to the current-branch}
+git reset <file> {Remove a specified file from the staging area, but leave the working directory unchanged}
+git reset {Reset the staging area to match the most recent commit,  but leave the working directory unchanged}
+git reset --hard {Reset the staging area and the working directory to match the most recent commit}
+git reset --hard <commit> {Move the current branch backward to specified commit and the reset both the staging area and the working directory to match}
+git clean {removes untracked files from your current directory; reset removes files from staging area while clean removes untracked files}
+git clean -n {Performs a "dry run" of git clean. This will show u which fils are going to be removed before actually removing it}
+git clean -f {Removes untracked files from the current directory. '-f'(force) flag is reqd unless clean.requireForce option is set to false(true by default). This will not remove untrackd files specified by .gitignore }
+git clean -f <path> {Remove the untracked files from the specified file only}
+git clean -df {Remove untracked files and untracked directories from the current directory}
