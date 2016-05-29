@@ -36,3 +36,6 @@ git rebase --abort
 
 INITIALATION
 git init --bare
+
+CONFIGUARTIONS
+git config --global --edit
