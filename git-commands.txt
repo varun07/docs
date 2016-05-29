@@ -64,3 +64,4 @@ git clean -n {Performs a "dry run" of git clean. This will show u which fils are
 git clean -f {Removes untracked files from the current directory. '-f'(force) flag is reqd unless clean.requireForce option is set to false(true by default). This will not remove untrackd files specified by .gitignore }
 git clean -f <path> {Remove the untracked files from the specified file only}
 git clean -df {Remove untracked files and untracked directories from the current directory}
+git clean -xf {Removes untracked files from the current direcotry as well as files that git ignores}
