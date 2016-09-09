@@ -1,3 +1,4 @@
+MANAGE CHANGES
 git add <filename/directory>
 git add . {Add everything that has changed}
 git commit {create commit commit object with staged changes}
@@ -25,6 +26,18 @@ git log [head1]..[head2] {shows the change log b/w head2 and the common ancestor
 git checkout -b [new-branch-name] {create and checkout new-branch from current-branch}
 git checkout -b <new-branch> <existing-branch> {Base the new-branch off existing branch rather than current-branch}
 
+MANAGING REMOTE BRANCHES
+git clone <git-url> {Clones the git repo at specified url to current directory}
+git remote {List the short names for each remote handle you specified.}
+git remote -v {List the remote names along with the url associated with the short name}
+git remote add <shortname> <url> {adds the shortname for the specified url of the repo}
+git fetch [remote-name] {fetches the repo for the specified short name of the remote url. Fetch only gets the data/changes, it does not merge the changes.}
+git pull {fetches data from the server you originally cloned from and automatically tries to merge it into the code you’re currently working on}
+git push [remote-name] [branch-name] {ex: git push origin master}
+git remote show [remote-name] {to see more information about a particular remote}
+git remote rename <oldname> <shortname> {to rename branches}
+git remote rm <remote-name> {to remove the remote if not being used}
+
 UPDATES
 git merge <branch-name> {merge the specified branch to the current branch}
 git merge --no-ff <branch-name> {merge the specified branch into the current branch, but always generate a merge commit}
@@ -38,12 +51,16 @@ INITIALATION
 git init --bare
 
 CONFIGUARTIONS
-git config --global --edit
-configuration in threee files
-|
---> <repo>/.git/config – Repository-specific settings.
---> ~/.gitconfig – User-specific settings. This is where options set with the --global flag are stored.
---> $(prefix)/etc/gitconfig – System-wide settings
+git config --global --edit {Open configuration user specific configuration files to edit}
+	configuration in threee files
+	|
+	--> <repo>/.git/config – Repository-specific settings.
+	--> ~/.gitconfig – User-specific settings. This is where options set with the --global flag are stored.
+	--> $(prefix)/etc/gitconfig – System-wide settings
+	
+git config --global <key> <value> {add user email id to user specific configuration file. Ex: git config --global user.email johndoe@example.com}
+git config --global core.editor noteoad {changes the default application with which the configuration file to notepad in windows}
+
 
 SAVING CHANGES
 git add <file>/<directory>
