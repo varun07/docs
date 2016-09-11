@@ -55,11 +55,15 @@ git config --global --edit {Open configuration user specific configuration files
 	configuration in threee files
 	|
 	--> <repo>/.git/config – Repository-specific settings.
-	--> ~/.gitconfig – User-specific settings. This is where options set with the --global flag are stored.
+	--> ~/.gitconfig : User-specific settings. This is where options set with the --global flag are stored.
+		In Windows, the file is at C:\Users\<user>.
 	--> $(prefix)/etc/gitconfig – System-wide settings
+		In Windows Vista and above, the file is at C:\ProgramData\git.
 	
 git config --global <key> <value> {add user email id to user specific configuration file. Ex: git config --global user.email johndoe@example.com}
 git config --global core.editor noteoad {changes the default application with which the configuration file to notepad in windows}
+git config --list {List the configurations from all git configuration files. The last entry for the same key is used.}
+git config user.name {The used value for the specified key}
 
 
 SAVING CHANGES
