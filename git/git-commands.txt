@@ -86,3 +86,7 @@ git clean -f {Removes untracked files from the current directory. '-f'(force) fl
 git clean -f <path> {Remove the untracked files from the specified file only}
 git clean -df {Remove untracked files and untracked directories from the current directory}
 git clean -xf {Removes untracked files from the current direcotry as well as files that git ignores}
+
+HELP
+git help <verb>
+git <verb> --help
